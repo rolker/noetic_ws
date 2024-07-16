@@ -9,6 +9,14 @@ Color_On='\033[1;32m\033[40m'
 
 set -x
 
+echo -e "\n${Color_On}Add ROS deb source${Color_Off}\n"
+
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+
+sudo apt install curl 
+
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+
 echo -e "\n${Color_On}Install initial dependencies${Color_Off}\n"
 
 sudo apt install python3-rosdep python3-rosinstall-generator python3-vcstools python3-vcstool build-essential

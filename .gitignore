@@ -1,0 +1,7 @@
+src/
+build_isolated/
+devel_isolated/
+
+.catkin_workspace
+.vscode/
+scripts/noetic.rosinstall
