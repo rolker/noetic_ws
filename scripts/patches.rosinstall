@@ -1,0 +1,9 @@
+- git:
+    local-name: rosconsole
+    uri: https://github.com/rolker/rosconsole.git
+    version: noetic-on-2404
+- git:
+    local-name: ros_comm
+    uri: https://github.com/rolker/ros_comm.git
+    version: noetic-on-2404
+
