@@ -11,11 +11,20 @@ set -x
 
 echo -e "\n${Color_On}Add ROS deb source${Color_Off}\n"
 
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+# To get some of the non ROS-distro specific ros tools
+# From https://docs.ros.org/en/rolling/Installation/Alternatives/Ubuntu-Development-Setup.html
 
-sudo apt install curl 
+sudo apt install software-properties-common
+sudo add-apt-repository -y universe
 
-curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+sudo apt install curl -y
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+
+echo -e "\n${Color_On}Update packages list${Color_Off}\n"
+
+sudo apt update
 
 echo -e "\n${Color_On}Install initial dependencies${Color_Off}\n"
 
