@@ -10,3 +10,7 @@
     local-name: geometry
     uri: https://github.com/ros-o/geometry.git
     version: obese-devel
+- git:
+    local-name: geometry2
+    uri: https://github.com/ros/geometry2.git
+    version: noetic-devel
