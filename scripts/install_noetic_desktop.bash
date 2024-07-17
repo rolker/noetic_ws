@@ -50,5 +50,4 @@ sudo chown $USER /opt/ros/noetic
 
 ROS_PYTHON_VERSION=3 ./src/catkin/bin/catkin_make_isolated -DPYTHON_EXECUTABLE=/usr/bin/python3 --install --install-space /opt/ros/noetic
 
-source install_isolated/setup.bash
 
