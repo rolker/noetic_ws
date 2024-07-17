@@ -1,6 +1,7 @@
 src/
-build_isolated/
-devel_isolated/
+**/build_isolated/
+**/devel_isolated/
+**/install_isolated/
 
 .catkin_workspace
 .vscode/
