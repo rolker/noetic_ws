@@ -42,4 +42,4 @@ cd ../extras_ws || exit
 
 echo -e "\n${Color_On}Build ROS extras${Color_Off}\n"
 
-ROS_PYTHON_VERSION=3 catkin_make_isolated -DPYTHON_EXECUTABLE=/usr/bin/python3 --install
+ROS_PYTHON_VERSION=3 catkin_make_isolated -DPYTHON_EXECUTABLE=/usr/bin/python3 --install --install-space /opt/ros/noetic
