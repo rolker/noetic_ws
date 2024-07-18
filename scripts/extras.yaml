@@ -100,8 +100,8 @@
     version: master
 - git:
     local-name: rosmon
-    uri: git@github.com:lucasw/rosmon.git
-    version: build_2204
+    uri: git@github.com:rolker/rosmon.git
+    version: noetic-on-2404
 - git:
     local-name: unique_identifier
     uri: https://github.com/ros-geographic-info/unique_identifier.git
